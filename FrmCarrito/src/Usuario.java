@@ -6,6 +6,7 @@ public class Usuario {
 	String apMaternoUsuario;
 	String rfcUsuario;
 	String calleUsuario;
+	
 	//Creamos un constructor de tipoCadena
 	public Usuario(String nombreUsuario) {		
 		this.nombreUsuario = nombreUsuario;		
