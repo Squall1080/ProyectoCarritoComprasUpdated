@@ -1,15 +1,25 @@
+package smart.utilerias;
+
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import smart.modelo.CarritoCompras;
+import smart.modelo.Producto;
+import smart.web.UsuarioController;
 
 public class Main {
 
 	private static int select;
 
-	public static void main(String arg[]) {
+	public static void main2(String arg[]) {
 		Scanner leer = new Scanner(System.in);
 		Scanner leer2 = new Scanner(System.in);
 		Producto producto1 = new Producto();
+		producto1.setNombreProducto("nombreProducto1");
+		
 		CarritoCompras carritoCompras = new CarritoCompras();
 		producto1.getColorProducto();
 		producto1.getMarcaProducto();
@@ -91,5 +101,13 @@ public class Main {
 		}
 
 	}
+	
+	public static void main(String arg[]) {
+		UsuarioController usuarioController = new UsuarioController();
+		System.out.println(usuarioController.getNombreUsuarioByRFC("OO999999UI"));
+	
+	}
 
 }
+
+

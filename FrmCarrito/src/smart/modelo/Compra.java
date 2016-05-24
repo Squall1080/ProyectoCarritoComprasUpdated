@@ -1,3 +1,4 @@
+package smart.modelo;
 
 public class Compra {
 	Usuario usuario;

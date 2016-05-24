@@ -1,3 +1,4 @@
+package smart.modelo;
 
 public class Producto {
 
@@ -10,6 +11,7 @@ public class Producto {
 	private String marcaProducto;
 
 	public Producto() {
+		
 		
 	}
 

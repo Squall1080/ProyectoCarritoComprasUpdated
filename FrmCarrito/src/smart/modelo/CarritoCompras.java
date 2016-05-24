@@ -1,3 +1,4 @@
+package smart.modelo;
 import java.util.List;
 
 public class CarritoCompras {
