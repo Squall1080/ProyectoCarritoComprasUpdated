@@ -2,11 +2,11 @@ package smart.modelo;
 
 public class Producto {
 
-	private String claveProducto;
+	
 	private Integer idProducto;
 	private String colorProducto;
 	private String precioProducto;
-	private String tamañoProducto;
+	
 	private String nombreProducto;
 	private String marcaProducto;
 
@@ -18,22 +18,16 @@ public class Producto {
 	public Producto(String claveProducto, Integer idProducto, String colorProducto, String precioProducto,
 			String tamañoProducto, String nombreProducto, String marcaProducto) {
 		super();
-		this.claveProducto = claveProducto;
+		
 		this.idProducto = idProducto;
 		this.colorProducto = colorProducto;
 		this.precioProducto = precioProducto;
-		this.tamañoProducto = tamañoProducto;
+		
 		this.nombreProducto = nombreProducto;
 		this.marcaProducto = marcaProducto;
 	}
 
-	public String getClaveProducto() {
-		return claveProducto;
-	}
-
-	public void setClaveProducto(String claveProducto) {
-		this.claveProducto = claveProducto;
-	}
+	
 
 	public Integer getIdProducto() {
 		return idProducto;
@@ -59,14 +53,7 @@ public class Producto {
 		this.precioProducto = precioProducto;
 	}
 
-	public String getTamañoProducto() {
-		return tamañoProducto;
-	}
-
-	public void setTamañoProducto(String tamañoProducto) {
-		this.tamañoProducto = tamañoProducto;
-	}
-
+	
 	public String getNombreProducto() {
 		return nombreProducto;
 	}
