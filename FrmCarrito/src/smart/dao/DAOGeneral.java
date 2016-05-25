@@ -3,13 +3,12 @@ package smart.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
  
 
 public class DAOGeneral {
  
-    static String cadenaConexion = "jdbc:postgresql://127.0.0.1/CARRITOCOMPRAS?" + "user=postgres&password=admin";
+    static String cadenaConexion = "jdbc:postgresql://127.0.0.1/carrito?" + "user=postgres&password=admin";
     Connection conexion = null;
 
     public Connection getConnection() {

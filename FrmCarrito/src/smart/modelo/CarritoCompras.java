@@ -2,19 +2,40 @@ package smart.modelo;
 import java.util.List;
 
 public class CarritoCompras {
-
-	private List<Producto> productos;
-
-	public List<Producto> getProductos() {
+	
+	private Integer idCarrito;
+	private Double subTotal;
+	private Double total;
+	private static List<Producto> productos;
+	private static List<Producto> productosEnCarrito;
+	public Integer getIdCarrito() {
+		return idCarrito;
+	}
+	public void setIdCarrito(Integer idCarrito) {
+		this.idCarrito = idCarrito;
+	}
+	public Double getSubTotal() {
+		return subTotal;
+	}
+	public void setSubTotal(Double subTotal) {
+		this.subTotal = subTotal;
+	}
+	public Double getTotal() {
+		return total;
+	}
+	public void setTotal(Double total) {
+		this.total = total;
+	}
+	public static List<Producto> getProductos() {
 		return productos;
 	}
-
-	public void setProductos(List<Producto> productos) {
-		this.productos = productos;
+	public static void setProductos(List<Producto> productos) {
+		CarritoCompras.productos = productos;
 	}
-
-	public CarritoCompras() {
-
+	public static List<Producto> getProductosEnCarrito() {
+		return productosEnCarrito;
 	}
-
+	public static void setProductosEnCarrito(List<Producto> productosEnCarrito) {
+		CarritoCompras.productosEnCarrito = productosEnCarrito;
+	}
 }
