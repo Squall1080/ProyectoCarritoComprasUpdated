@@ -2,14 +2,13 @@ package smart.service;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import smart.dao.CarritoComprasDAO;
 import smart.dao.UsuarioDAO;
 import smart.modelo.CarritoCompras;
 import smart.modelo.Producto;
 import smart.modelo.Usuario;
 
-public class CarritoServiceImpl implements CarritoService {
+public class CarritoComprasServiceImpl implements CarritoComprasService {
 	
 	CarritoComprasDAO carritoComprasDAO = new CarritoComprasDAO();
 	UsuarioDAO usuario = new UsuarioDAO();
@@ -51,7 +50,4 @@ public class CarritoServiceImpl implements CarritoService {
 		return (Producto) productosAAgregar;
 		
 	}
-	
-
-
 }

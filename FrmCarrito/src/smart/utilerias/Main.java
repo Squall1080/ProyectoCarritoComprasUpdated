@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import smart.modelo.CarritoCompras;
 import smart.modelo.Producto;
-import smart.web.CarritoController;
+import smart.web.CarritoComprasController;
 import smart.web.UsuarioController;
 
 public class Main {
@@ -107,7 +107,7 @@ public class Main {
 		UsuarioController usuarioController = new UsuarioController();
 		System.out.println(usuarioController.getNombreUsuarioByRFC("OO999999UI"));
 		
-		CarritoController carritoController = new CarritoController();
+		CarritoComprasController carritoComprasController = new CarritoComprasController();
 		System.out.println();
 	
 	}

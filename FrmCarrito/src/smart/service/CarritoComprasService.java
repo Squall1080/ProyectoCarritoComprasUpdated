@@ -3,7 +3,7 @@ package smart.service;
 import smart.modelo.Producto;
 import smart.modelo.Usuario;
 
-public interface CarritoService {
+public interface CarritoComprasService {
 	
 	public Usuario crearCarrito(Usuario usuario);
 	
