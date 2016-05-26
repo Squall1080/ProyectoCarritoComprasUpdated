@@ -3,7 +3,7 @@ package smart.modelo;
 import java.util.List;
 
 public class Producto {
-
+//test
 	private Integer idProducto;
 	private String nombreProducto;
 	private String precioProducto;
