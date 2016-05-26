@@ -18,8 +18,8 @@ public class CarritoComprasServiceImpl implements CarritoComprasService {
 		
 		while(usuario != null){
 			CarritoCompras nuevoCarrito = new CarritoCompras();
-			nuevoCarrito = Usuario.getUsuarioById();
 		}
+		return null;
 		
 	}
 

@@ -4,10 +4,24 @@ import smart.dao.UsuarioDAO;
 
 public class UsuarioServiceImpl implements UsuarioService {
 	UsuarioDAO usuarioDAO = new UsuarioDAO();
+
 	@Override
-	public String obtenerUsuarioByRFC(String rfcUsuario) {
+	public String crearCuenta(String crearCuentaUsuario) {
 		// TODO Auto-generated method stub
-		return this.usuarioDAO.getNombreUsuarioByRFC(rfcUsuario);
+		return null;
 	}
+
+	@Override
+	public String borrarCuenta(String borrarCuentaUsuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String login(String loginUsuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 
 }

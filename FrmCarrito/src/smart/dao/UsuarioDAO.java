@@ -13,16 +13,16 @@ public class UsuarioDAO extends DAOGeneral{
 		 this.conexion=getConnection();
 	 }
 	 
-	 public String getNombreUsuarioByRFC(String rfcUsuario){
+	 public String getNombreUsuarioById(String idUsuario){
          try{
         	 sentencia = conexion.createStatement();
-        	 String consultaSQL = "select * from \"USUARIO\" where \"RFC\"='"+rfcUsuario+"'";
+        	 String consultaSQL = "select * from \"USUARIO\" where \"ID_USUARIO\"='"+idUsuario+"'";
         	 System.out.println(consultaSQL);
         	 resultado = sentencia.executeQuery(consultaSQL);
         	 String nombreUsuario="N/E";
         	 while (resultado.next()) {
         		 nombreUsuario = resultado.getString("NOMBRE_USUARIO");
-        		 System.out.println("Resultado:"+nombreUsuario);
+        		 System.out.println("Resultado: "+nombreUsuario);
         	 }
         	 return nombreUsuario;
          }

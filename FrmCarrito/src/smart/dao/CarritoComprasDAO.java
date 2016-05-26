@@ -16,7 +16,7 @@ public class CarritoComprasDAO extends DAOGeneral{
 	 public Integer getCarritoById(Integer idCarrito){
          try{
         	 sentencia = conexion.createStatement();
-        	 String consultaSQL = "select * from \"CARRITO_COMPRAS\" where \"idCarrito\"='"+idCarrito+"'";
+        	 String consultaSQL = "select * from \"CARRITO_COMPRAS\" where \"ID_CARRITO\"='"+idCarrito+"'";
         	 System.out.println(consultaSQL);
         	 resultado = sentencia.executeQuery(consultaSQL);
         	 //String carrito="N/E";
@@ -29,7 +29,7 @@ public class CarritoComprasDAO extends DAOGeneral{
          catch(Exception error){
         	 error.printStackTrace();
          }
-         return idCarrito;
+         return null;
  
 	 }
 }
