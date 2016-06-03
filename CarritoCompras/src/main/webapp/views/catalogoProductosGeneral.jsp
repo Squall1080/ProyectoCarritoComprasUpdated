@@ -89,7 +89,7 @@
 			</td>
 			
 			<td>
-				<img src = "../img/bicicleta.jpg" alt = "bicicleta">
+				<img src = "../img/Bicicleta.jpg" alt = "bicicleta">
 				<p>
 					Bicicleta $10,000
 				</p>
