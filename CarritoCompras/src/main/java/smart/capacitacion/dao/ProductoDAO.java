@@ -19,7 +19,6 @@ public class ProductoDAO extends DAOGeneral{
         	 String consultaSQL = "select * from \"PRODUCTO\" where \"ID_PRODUCTO\"='"+idProducto+"'";
         	 System.out.println(consultaSQL);
         	 resultado = sentencia.executeQuery(consultaSQL);
-        	 //String productoNoExiste = "N/E";
         	 while (resultado.next()) {
         		 idProducto = resultado.getInt("ID_PRODUCTO");
         		 System.out.println("Resultado: "+idProducto);
@@ -30,6 +29,7 @@ public class ProductoDAO extends DAOGeneral{
         	 error.printStackTrace();
          }
          return null;
- 
 	 }
+	 
+	 
 }
