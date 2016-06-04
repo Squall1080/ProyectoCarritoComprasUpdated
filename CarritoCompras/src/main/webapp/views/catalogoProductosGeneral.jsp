@@ -7,6 +7,8 @@
 			font-family: sans-serif;
 			}
 		table {
+				display: table-cell;
+				display: inline;
 				padding: 10px;
 				font-family: sans-serif;
 				color:white;
@@ -77,110 +79,254 @@
 	</p>
 	<section>
 	<table>
-		<tr>
-			<td>
-				<img src="../img/converse.jpg" alt = "tenis converse">
-				<p>
-					Tenis Converse $800
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/Bicicleta.jpg" alt = "bicicleta">
-				<p>
-					Bicicleta $10,000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/gameBoy.jpg" alt= "gameBoy">
-				<p>
-					Game boy $5000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/espada.jpg" alt= "espada">
-				<p>
-					Espada $18,000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/casco.jpg" alt= "casco">
-				<p>
-					Casco $900
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-		</tr>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src="../img/converse.jpg" alt = "tenis converse">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Tenis Converse
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$800
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="1">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
 	</table>
 	<table>
-		<tr>
-			<td>
-				<img src = "../img/jabon.jpg" alt= "jabon">
-				<p>
-					Jabon $15
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/botella_color.jpg" alt= "botella_color">
-				<p>
-					Botella de color $20
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/millenium_falcon.jpg" alt= "millenium_falcon">
-				<p>
-					Millenium Falcon $900,000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-			
-			<td>
-				<img src = "../img/at-at.jpg" alt= "at-at">
-				<p>
-					Mascota AT-AT $3000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-		
-			<td>
-				<img src = "../img/mustang.jpg" alt= "mustang">
-				<p>
-					Mustang $800,000
-				</p>
-				<p>
-					<input type= "submit" value= "Agregar">
-				</p>
-			</td>
-		</tr>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/Bicicleta.jpg" alt = "bicicleta">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Bicicleta
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$10,000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/gameBoy.jpg" alt= "gameBoy">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Game boy
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$5000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+			</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/espada.jpg" alt= "espada">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Espada
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$18,000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/casco.jpg" alt= "casco">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Casco
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$900
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/jabon.jpg" alt= "jabon">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Jabon
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$15
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/botella_color.jpg" alt= "botella_color">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Botella de color
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$20
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/millenium_falcon.jpg" alt= "millenium_falcon">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Millenium Falcon
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$900,000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/at-at.jpg" alt= "at-at">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Mascota AT-AT
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$3000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
+	</table>
+	<table>
+		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
+			<tr>
+				<td>
+					<img src = "../img/mustang.jpg" alt= "mustang">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Mustang
+				</td>
+			</tr>
+			<tr>
+				<td>
+					$800,000
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
+				</td>
+			</tr>
+		</form>
 	</table>
 	</section>
 </body>

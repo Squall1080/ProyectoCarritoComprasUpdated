@@ -1,11 +1,12 @@
 package smart.capacitacion.service;
 
+import java.util.List;
+
 import smart.capacitacion.dao.CarritoComprasDAO;
 import smart.capacitacion.dao.ProductoDAO;
 import smart.capacitacion.dao.UsuarioDAO;
 import smart.capacitacion.modelo.CarritoCompras;
 import smart.capacitacion.modelo.Producto;
-import smart.capacitacion.modelo.Usuario;
 
 public class CarritoComprasServiceImpl implements CarritoComprasService {
 	
@@ -26,10 +27,7 @@ public class CarritoComprasServiceImpl implements CarritoComprasService {
 	}
 
 	@Override
-	public boolean agregarProductoAlCarrito(CarritoCompras carritoCompras) {
-		
-		return this.carritoComprasDAO.agregarProductoAlCarrito(carritoCompras);
+	public Producto agregarProductoAlCarrito(CarritoCompras carritoCompras) {
+			return this.carritoComprasDAO.agregarProductoAlCarrito(carritoCompras);
+		}
 	}
-
-
-}

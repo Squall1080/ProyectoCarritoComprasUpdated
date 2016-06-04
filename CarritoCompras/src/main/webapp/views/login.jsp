@@ -77,7 +77,7 @@
 	</nav>
 	
 	<form name="loginForm" action="../UsuarioServlet" method="post">
-		<%=request.getSession().getAttribute("error")%>
+		<%=request.getSession().getAttribute("error")%>		
 		<div class = "tableRow">
 			<p>
 				Usuario: <input type ="text" name= "usuario" id="usuario" value=""> <br>
