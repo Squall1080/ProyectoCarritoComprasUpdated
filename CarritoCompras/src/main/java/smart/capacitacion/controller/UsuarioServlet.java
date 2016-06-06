@@ -1,14 +1,20 @@
 package smart.capacitacion.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import smart.capacitacion.modelo.CarritoCompras;
+import smart.capacitacion.modelo.Producto;
 import smart.capacitacion.modelo.Usuario;
 import smart.capacitacion.service.CarritoComprasService;
 import smart.capacitacion.service.CarritoComprasServiceImpl;
+import smart.capacitacion.service.ProductoService;
+import smart.capacitacion.service.ProductoServiceImpl;
 import smart.capacitacion.service.UsuarioService;
 import smart.capacitacion.service.UsuarioServiceImpl;
 
@@ -18,7 +24,9 @@ import smart.capacitacion.service.UsuarioServiceImpl;
 public class UsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UsuarioService usuarioService = new UsuarioServiceImpl();
-    /**
+	CarritoComprasService carritoComprasService = new CarritoComprasServiceImpl();
+	ProductoService productoService = new ProductoServiceImpl();
+	/**
      * Default constructor. 
      */
     public UsuarioServlet() {
@@ -38,12 +46,11 @@ public class UsuarioServlet extends HttpServlet {
 			usuario.setPasswordUsuario(request.getParameter("password"));
 			usuario = this.usuarioService.login(usuario);
 			if (usuario != null){
-				CarritoCompras carritoCompras = usuarioService.obtenerCarritoComprasByUsuario(usuario);
+				CarritoCompras carritoCompras = carritoComprasService.obtenerCarritoComprasByUsuario(usuario);
 				request.getSession().setAttribute("carritoCompras", carritoCompras);
 				System.out.println("Ya existe carrito");
 				
-				response.sendRedirect("views/catalogoProductosGeneral.jsp");
-				
+				response.sendRedirect("views/catalogoProductosGeneral.jsp");				
 			}	
 			else{
 				request.getSession().setAttribute("error", "DATOS NO VALIDOS");

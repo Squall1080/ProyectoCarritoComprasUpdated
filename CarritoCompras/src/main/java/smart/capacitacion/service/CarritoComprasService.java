@@ -12,4 +12,6 @@ public interface CarritoComprasService {
 	public boolean eliminarProductoDelCarrito(CarritoCompras carritoCompras);
 
 	public Producto agregarProductoAlCarrito(CarritoCompras carritoCompras);
+
+	CarritoCompras obtenerCarritoComprasByUsuario(Usuario usuario);
 }

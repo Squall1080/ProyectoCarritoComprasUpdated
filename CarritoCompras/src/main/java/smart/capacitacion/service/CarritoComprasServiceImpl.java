@@ -28,5 +28,23 @@ public class CarritoComprasServiceImpl implements CarritoComprasService {
 	@Override
 	public Producto agregarProductoAlCarrito(CarritoCompras carritoCompras) {
 			return this.carritoComprasDAO.agregarProductoAlCarrito(carritoCompras);
-		}
 	}
+	
+	@Override
+	public CarritoCompras obtenerCarritoComprasByUsuario(Usuario usuario) {
+		// TODO Auto-generated method stub
+		CarritoCompras carritoCompras = usuarioDAO.obtenerCarritoComprasByUsuario(usuario);
+
+		if (carritoCompras != null) {
+			return carritoCompras;
+		} else {
+			CarritoComprasDAO carritoDAO = new CarritoComprasDAO();
+			carritoDAO.crearCarritoByUsuario(usuario);
+			return carritoCompras;
+		}
+
+	}
+
+}
+
+

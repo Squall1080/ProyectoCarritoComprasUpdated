@@ -3,8 +3,11 @@ package smart.capacitacion.dao;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
+import java.util.ArrayList;
 
 import smart.capacitacion.modelo.CarritoCompras;
+import smart.capacitacion.modelo.Producto;
 import smart.capacitacion.modelo.Usuario;
 
 public class UsuarioDAO extends DAOGeneral{
@@ -65,6 +68,18 @@ public class UsuarioDAO extends DAOGeneral{
 			while (resultado.next()) {
 				CarritoCompras carritoCompras = new CarritoCompras();
 				carritoCompras.setIdCarrito(resultado.getInt("ID_CARRITO"));
+				consultaSQL = "SELECT * FROM \"CARRITO_PRODUCTO\" CP INNER JOIN \"PRODUCTO\" P ON P.\"ID_PRODUCTO\" = CP.\"ID_PRODUCTO\" WHERE CP.\"ID_CARRITO\"="+carritoCompras.getIdCarrito();
+				resultado = sentencia.executeQuery(consultaSQL);
+				List<Producto> productos = new ArrayList<Producto>();
+				Producto producto;
+				while (resultado.next()) {
+					producto = new Producto();
+					producto.setIdProducto(resultado.getInt("ID_PRODUCTO"));
+					producto.setNombreProducto(resultado.getString("NOMBRE_PRODUCTO"));
+					//Agregar todos los atributos
+					productos.add(producto);
+				}				
+				carritoCompras.setProductosEnCarrito(productos);
 				return carritoCompras;
 			}
 

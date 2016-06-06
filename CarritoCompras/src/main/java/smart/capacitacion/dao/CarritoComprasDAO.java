@@ -30,7 +30,7 @@ public class CarritoComprasDAO extends DAOGeneral{
 				System.out.println(consultaSQL);
 				sentencia.execute(consultaSQL);
 				sentencia = conexion.createStatement();
-				String consultaSQL2 = "SELECT U.\"ID_USUARIO\",C.\"ID_CARRITO\" FROM \"USUARIO\" U INNER JOIN \"CARRITO_COMPRAS\" C ON (U.\"ID_USUARIO\" = C.\"ID_USUARIO\") WHERE C.\"ID_USUARIO\" ='"
+				String consultaSQL2 = "SELECT C.\"ID_CARRITO\" FROM \"USUARIO\" U INNER JOIN \"CARRITO_COMPRAS\" C ON (U.\"ID_USUARIO\" = C.\"ID_USUARIO\") WHERE C.\"ID_USUARIO\" ='"
 						+ usuario.getIdUsuario() + "'";
 				resultado = sentencia.executeQuery(consultaSQL2);
 				while (resultado.next()) {

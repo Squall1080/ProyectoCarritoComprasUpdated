@@ -1,4 +1,9 @@
 <%@ page import="smart.capacitacion.modelo.CarritoCompras" %>
+<%@ page import="smart.capacitacion.modelo.Producto" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="smart.capacitacion.service.*" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -78,256 +83,42 @@
 		
 	</p>
 	<section>
+	<form action="../ProductoServlet">
 	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src="../img/converse.jpg" alt = "tenis converse">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Tenis Converse
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$800
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="1">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
+		<%
+		ProductoService productoService = new ProductoServiceImpl();
+		List<Producto> productosAll = new ArrayList<Producto>();
+		productosAll = productoService.obtenerTodosLosProductos();
+		int i=0;
+		int limite=4; 
+		%>
+		<tr>			
+		<%for (; i<limite; i++) {%>
+				<td><input type="hidden" id="idProducto" name="idProducto" value="<%=productosAll.get(i).getIdProducto() %>"/></td>
+				<td><%=productosAll.get(i).getNombreProducto() %></td>		
+				<td><img src="<%=productosAll.get(i).getNombreProducto() %>"/></td>			
+				<td><input type="submit" value="comprar"/>
+		<%} %>
+		</tr>
+		<tr>			
+		<%for (;i<limite*2; i++) {%>
+				<td><input type="hidden" id="idProducto" name="idProducto" value="<%=productosAll.get(i).getIdProducto() %>"/></td>
+				<td><%=productosAll.get(i).getNombreProducto() %></td>			
+				<td><img src="<%=productosAll.get(i).getNombreProducto() %>"/></td>			
+				<td><input type="submit" value="comprar"/>
+		<%} %>
+		</tr>
+		<tr>			
+		<%for (; i<productosAll.size(); i++) {%>
+				<td><input type="hidden" id="idProducto" name="idProducto" value="<%=productosAll.get(i).getIdProducto() %>"/></td>
+				<td><%=productosAll.get(i).getNombreProducto() %></td>			
+				<td><img src="<%=productosAll.get(i).getNombreProducto() %>"/></td>			
+				<td><input type="submit" value="comprar"/>
+		<%} %>
+		</tr>
+		
 	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/Bicicleta.jpg" alt = "bicicleta">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Bicicleta
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$10,000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="2">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/gameBoy.jpg" alt= "gameBoy">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Game boy
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$5000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="3">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-			</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/espada.jpg" alt= "espada">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Espada
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$18,000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="4">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/casco.jpg" alt= "casco">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Casco
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$900
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="5">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/jabon.jpg" alt= "jabon">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Jabon
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$15
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="6">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/botella_color.jpg" alt= "botella_color">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Botella de color
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$20
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="7">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/millenium_falcon.jpg" alt= "millenium_falcon">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Millenium Falcon
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$900,000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="8">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/at-at.jpg" alt= "at-at">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Mascota AT-AT
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$3000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="9">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
-	<table>
-		<form name ="agregarProductoAlCarrito" action ="../ProductoServlet" method="post">
-			<tr>
-				<td>
-					<img src = "../img/mustang.jpg" alt= "mustang">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Mustang
-				</td>
-			</tr>
-			<tr>
-				<td>
-					$800,000
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="10">
-					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
-				</td>
-			</tr>
-		</form>
-	</table>
+	</form>
 	</section>
 </body>
 </html>
