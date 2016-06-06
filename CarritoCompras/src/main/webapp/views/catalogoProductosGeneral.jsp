@@ -122,7 +122,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="2">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -147,7 +147,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="3">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -172,7 +172,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="4">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -197,7 +197,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="5">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -222,7 +222,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="6">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -247,7 +247,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="7">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -272,7 +272,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="8">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -297,7 +297,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="9">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>
@@ -322,7 +322,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="hidden" name="idProducto" id= "idProducto" value="">
+					<input type="hidden" name="idProducto" id= "idProducto" value="10">
 					<input type= "submit" name = "producto" id = "producto" value= "Agregar">
 				</td>
 			</tr>

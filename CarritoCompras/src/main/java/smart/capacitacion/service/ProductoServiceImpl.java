@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-import smart.capacitacion.dao.CarritoComprasDAO;
 import smart.capacitacion.modelo.CarritoCompras;
 import smart.capacitacion.modelo.Producto;
 

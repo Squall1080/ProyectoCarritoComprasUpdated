@@ -1,14 +1,13 @@
 package smart.capacitacion.service;
 
-import java.util.List;
-
 import smart.capacitacion.modelo.CarritoCompras;
 import smart.capacitacion.modelo.Producto;
+import smart.capacitacion.modelo.Usuario;
 
 
 public interface CarritoComprasService {
 	
-	public boolean crearCarrito(CarritoCompras carritoCompras);
+	public CarritoCompras crearCarritoByUsuario(Usuario usuario);
 		
 	public boolean eliminarProductoDelCarrito(CarritoCompras carritoCompras);
 

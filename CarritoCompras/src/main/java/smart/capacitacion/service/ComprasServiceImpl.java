@@ -6,7 +6,6 @@ import java.util.List;
 import smart.capacitacion.dao.ComprasDAO;
 import smart.capacitacion.modelo.CarritoCompras;
 import smart.capacitacion.modelo.Compra;
-import smart.capacitacion.modelo.Usuario;
 
 public class ComprasServiceImpl implements ComprasService {
 
