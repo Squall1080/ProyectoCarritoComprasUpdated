@@ -81,8 +81,8 @@
 		<input type ="hidden" name= "opcion" id="opcion" value="1">
 		<div class = "tableRow">
 			<p>
-				Usuario: <input type ="text" name= "usuario" id="usuario" value=""> <br>
-				Password:<input type = "password" name = "password" id="password"value= ""> <br>
+				Usuario: <input type ="text" name= "usuario" id="usuario" value=""><br>
+				Password:<input type = "password" name = "password" id="password"value= ""><br>
 				<input type ="submit" name = "ingresarUsuario" value="Ingresar">
 			</p>
 			</div>

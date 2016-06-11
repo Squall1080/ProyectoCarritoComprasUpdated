@@ -76,6 +76,9 @@ public class UsuarioDAO extends DAOGeneral{
 					producto = new Producto();
 					producto.setIdProducto(resultado.getInt("ID_PRODUCTO"));
 					producto.setNombreProducto(resultado.getString("NOMBRE_PRODUCTO"));
+					producto.setPrecioProducto(resultado.getDouble("PRECIO"));
+					producto.setColorProducto(resultado.getString("COLOR"));
+					producto.setMarcaProducto(resultado.getString("MARCA"));
 					//Agregar todos los atributos
 					productos.add(producto);
 				}				

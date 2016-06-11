@@ -12,7 +12,7 @@ public class CarritoCompras {
 	
 	
 	public CarritoCompras(){
-	 productosEnCarrito= new ArrayList<Producto>();	
+	 productosEnCarrito= new ArrayList<Producto>();
 	}
 	
 	public CarritoCompras(Integer idCarrito, Double subTotal, Double total, List<Producto> productosEnCarrito) {
@@ -62,7 +62,4 @@ public class CarritoCompras {
 	public void setProductosEnCarrito(List<Producto> productosEnCarrito) {
 		this.productosEnCarrito = productosEnCarrito;
 	}
-	
-	
-	
 }

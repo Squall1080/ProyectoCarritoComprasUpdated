@@ -30,8 +30,7 @@ public class CarritoComprasDAO extends DAOGeneral{
 				System.out.println(consultaSQL);
 				sentencia.execute(consultaSQL);
 				sentencia = conexion.createStatement();
-				String consultaSQL2 = "SELECT C.\"ID_CARRITO\" FROM \"USUARIO\" U INNER JOIN \"CARRITO_COMPRAS\" C ON (U.\"ID_USUARIO\" = C.\"ID_USUARIO\") WHERE C.\"ID_USUARIO\" ='"
-						+ usuario.getIdUsuario() + "'";
+				String consultaSQL2 = "SELECT C.\"ID_CARRITO\" FROM \"USUARIO\" U INNER JOIN \"CARRITO_COMPRAS\" C ON (U.\"ID_USUARIO\" = C.\"ID_USUARIO\") WHERE C.\"ID_USUARIO\" ='"+ usuario.getIdUsuario() + "'";
 				resultado = sentencia.executeQuery(consultaSQL2);
 				while (resultado.next()) {
 					
@@ -51,7 +50,7 @@ public class CarritoComprasDAO extends DAOGeneral{
 		}
 	 
 	 //agregar producto al carrito
-	 public Producto agregarProductoAlCarrito(CarritoCompras carritoCompras){
+	 public List<Producto> agregarProductoAlCarrito(CarritoCompras carritoCompras){
          try{
         	 //inserta datos idProducto e idCarrito en la tabla carrito_producto
         	 sentencia = conexion.createStatement();
@@ -60,7 +59,7 @@ public class CarritoComprasDAO extends DAOGeneral{
         	 sentencia.execute(consultaSQL);
         	 //recupera esos datos
         	 sentencia2 = conexion.createStatement();
-        	 String consultaSQL2 = "SELECT \"ID_PRODUCTO\" FROM \"CARRITO_PRODUCTO\" p inner join \"CARRITO_COMPRAS\" c on p.\"ID_CARRITO\" = c.\"ID_CARRITO\" where p.\"ID_PRODUCTO\" = " + carritoCompras.getIdCarrito();
+        	 String consultaSQL2 = "SELECT \"ID_PRODUCTO\" FROM \"CARRITO_PRODUCTO\" p inner join \"CARRITO_COMPRAS\" c on p.\"ID_CARRITO\" = c.\"ID_CARRITO\" where c.\"ID_CARRITO\" = " + carritoCompras.getIdCarrito();
         	 System.out.println(consultaSQL2);
         	 resultado = sentencia.executeQuery(consultaSQL2);
         	 List<Producto> listaCarritoCompras = new ArrayList<Producto>();
@@ -70,7 +69,7 @@ public class CarritoComprasDAO extends DAOGeneral{
         		 producto.setIdProducto(resultado.getInt("ID_PRODUCTO"));
         		 listaCarritoCompras.add(producto);
         	 }
-        		 return producto;
+        	 return listaCarritoCompras;
         	 }
          
         	 catch(Exception error){

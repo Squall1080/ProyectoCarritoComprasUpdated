@@ -1,7 +1,5 @@
 package smart.capacitacion.service;
 
-import java.util.ArrayList;
-
 import java.util.List;
 
 import smart.capacitacion.dao.ProductoDAO;
@@ -12,9 +10,8 @@ public class ProductoServiceImpl implements ProductoService {
 	ProductoDAO productoDAO = new ProductoDAO(); 
 	
 	@Override
-	public Producto obtenerProductosByIdCarrito(CarritoCompras idCarrito) {
-
-		return null;
+	public List<Producto> obtenerProductosByCarrito(CarritoCompras idCarrito) {
+		return this.obtenerProductosByCarrito(idCarrito);
 	}
 
 	@Override

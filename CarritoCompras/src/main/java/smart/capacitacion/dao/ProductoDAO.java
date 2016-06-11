@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import smart.capacitacion.modelo.CarritoCompras;
 import smart.capacitacion.modelo.Producto;
 
 public class ProductoDAO extends DAOGeneral{
@@ -17,23 +18,26 @@ public class ProductoDAO extends DAOGeneral{
 		 this.conexion=getConnection();
 	 }
 	 
-	 public Integer getProductoById(Integer idProducto){
-         try{
-        	 sentencia = conexion.createStatement();
-        	 String consultaSQL = "select * from \"PRODUCTO\" where \"ID_PRODUCTO\"='"+idProducto+"'";
-        	 System.out.println(consultaSQL);
-        	 resultado = sentencia.executeQuery(consultaSQL);
-        	 while (resultado.next()) {
-        		 idProducto = resultado.getInt("ID_PRODUCTO");
-        		 System.out.println("Resultado: "+idProducto);
-        	 }
-        	 return idProducto;
-         }
-         catch(Exception error){
-        	 error.printStackTrace();
-         }
-         return null;
-	 }
+	 public List<Producto> obtenerProductosByCarrito(CarritoCompras CarritoCompras){
+			try{
+				 sentencia = conexion.createStatement();
+	        	 String consultaSQL = "SELECT \"ID_CARRITO\" FROM \"CARRITO_PRODUCTO\";";
+	        	 System.out.println(consultaSQL);
+	        	 resultado = sentencia.executeQuery(consultaSQL);
+	        	 List<Producto> listaCarritoCompras = new ArrayList<Producto>();
+	        	 Producto producto = null;
+	        	 while(resultado.next()){
+	        		 producto = new Producto();
+	        		 producto.setIdProducto(resultado.getInt("ID_PRODUCTO"));
+	        		 listaCarritoCompras.add(producto);
+		       	}
+		       	return listaCarritoCompras;
+		    }
+	        catch(Exception error){
+	       	 error.printStackTrace();
+	        }
+	        return null;
+		}
 
 	public List<Producto> obtenerTodosLosProductos() {
 		// TODO Auto-generated method stub
@@ -48,6 +52,10 @@ public class ProductoDAO extends DAOGeneral{
 	       		 producto = new Producto();
 	       		 producto.setIdProducto(resultado.getInt("ID_PRODUCTO"));
 	       		 producto.setNombreProducto(resultado.getString("NOMBRE_PRODUCTO"));
+	       		 producto.setPrecioProducto(resultado.getInt("PRECIO"));
+	       		 producto.setColorProducto(resultado.getString("COLOR"));
+	       		 producto.setMarcaProducto(resultado.getString("MARCA"));
+	       	     producto.setUrlImagen(resultado.getString("IMAGEN"));
 	       		 productos.add(producto);
 	       	}
 	       	return productos;

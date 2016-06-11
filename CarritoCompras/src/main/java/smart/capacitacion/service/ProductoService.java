@@ -7,7 +7,6 @@ import smart.capacitacion.modelo.Producto;
 
 public interface ProductoService {
 	
-	public Producto obtenerProductosByIdCarrito(CarritoCompras idCarrito);
+	public List<Producto> obtenerProductosByCarrito(CarritoCompras idCarrito);
 	public List<Producto> obtenerTodosLosProductos();
-
 }
